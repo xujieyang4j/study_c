@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-struct node *add_to_head(struct node *first, int value);
-struct node *search_list(struct node *first, int value);
-struct node *del_list(struct node *list, int value);
+
 struct node
 {
     int value;
     struct node *next;
 };
+struct node *add_to_head(struct node *first, int value);
+struct node *search_list(struct node *first, int value);
+struct node *del_list(struct node *list, int value);
 
 int main(int argc, char const *argv[])
 {
@@ -31,6 +32,11 @@ struct node *add_to_head(struct node *first, int value)
     // 创建结点new_node，插入链表头部
     struct node *new_node;
     new_node = malloc(sizeof(struct node));
+    if (new_node == NULL)
+    {
+        printf("Error: malloc failed in concat\n");
+        exit(EXIT_FAILURE);
+    }
     // (*new_node).value = value;
     new_node->value = value;
     new_node->next = first;
