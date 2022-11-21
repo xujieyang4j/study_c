@@ -32,7 +32,8 @@ int main(int argc, char const *argv[])
 
     // 向客户端发送数据
     char str[] = "xujieyang";
-    write(client_socket, str, sizeof(str));
+    // write(client_socket, str, sizeof(str));
+    send(client_socket, str, sizeof(str), 0);
 
     // 关闭套接字
     close(client_socket);

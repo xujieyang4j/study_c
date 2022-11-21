@@ -25,7 +25,8 @@ int main(int argc, char const *argv[])
 
     // 读取服务器传回的数据
     char buffer[40];
-    read(sock, buffer, sizeof(buffer) - 1);
+    // read(sock, buffer, sizeof(buffer) - 1);
+    recv(sock, buffer, sizeof(buffer) - 1, 0);
     printf("Message form server: %s\n", buffer);
 
     //关闭套接字
