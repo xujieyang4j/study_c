@@ -3,6 +3,11 @@
         "stdlib.h": "c",
         "math.h": "c",
         "string.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "inet.h": "c",
+        "__bit_reference": "c",
+        "__string": "c",
+        "cstring": "c",
+        "ostream": "c"
     }
 }
