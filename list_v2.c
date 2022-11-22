@@ -15,6 +15,8 @@ int main(int argc, char const *argv[])
     add_to_head2(&list, 2);
     add_to_head2(&list, 3);
 
+    printf("first node value:%d", list->value);
+
     return 0;
 }
 
